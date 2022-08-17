@@ -98,6 +98,78 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Dpad_Right"",
+                    ""type"": ""Button"",
+                    ""id"": ""7894cf37-d3eb-492d-8721-555458044f42"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dpad_Left"",
+                    ""type"": ""Button"",
+                    ""id"": ""ea991d08-9385-42fc-bb0a-53d863f138ad"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dpad_Up"",
+                    ""type"": ""Button"",
+                    ""id"": ""3309d7c9-5de4-49a5-a62e-cc73a63c6b3a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dpad_Down"",
+                    ""type"": ""Button"",
+                    ""id"": ""c69deb6b-aa74-4996-8158-c03949f9798f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LeftStick_X"",
+                    ""type"": ""Value"",
+                    ""id"": ""ef20258c-6188-4db5-a83b-870643eecddf"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""LeftStick_Y"",
+                    ""type"": ""Value"",
+                    ""id"": ""b3e8b609-72e4-46b6-a105-48a776663c13"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""RightStick_X"",
+                    ""type"": ""Value"",
+                    ""id"": ""54385103-cb40-43f7-a22b-984278b7be55"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""RightStick_Y"",
+                    ""type"": ""Value"",
+                    ""id"": ""74176a68-7f24-42c0-94b0-631a38f8707f"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -188,6 +260,94 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""action"": ""Shoulder_Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d05fd620-ca17-4eca-8404-268890142f3c"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dpad_Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aec73b64-0956-4de9-8b76-987949b451af"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dpad_Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d6600b22-a82c-4376-aec7-14f1b9e23457"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dpad_Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""436f27b1-2e58-4cef-98ed-a358706b74a0"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dpad_Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bf32a625-2a4a-40ac-b56e-6d0c67b59706"",
+                    ""path"": ""<Gamepad>/leftStick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftStick_X"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5d3038c1-92f7-427d-ada2-b6b45861c262"",
+                    ""path"": ""<Gamepad>/leftStick/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftStick_Y"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""78653a10-e4d2-4000-93ef-789d26d97789"",
+                    ""path"": ""<Gamepad>/rightStick/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightStick_Y"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e466cf47-1598-4c75-a2cf-e4fab18d902a"",
+                    ""path"": ""<Gamepad>/rightStick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightStick_X"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -204,6 +364,14 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Eye_Trigger_Right = m_Eye.FindAction("Trigger_Right", throwIfNotFound: true);
         m_Eye_Shoulder_Left = m_Eye.FindAction("Shoulder_Left", throwIfNotFound: true);
         m_Eye_Shoulder_Right = m_Eye.FindAction("Shoulder_Right", throwIfNotFound: true);
+        m_Eye_Dpad_Right = m_Eye.FindAction("Dpad_Right", throwIfNotFound: true);
+        m_Eye_Dpad_Left = m_Eye.FindAction("Dpad_Left", throwIfNotFound: true);
+        m_Eye_Dpad_Up = m_Eye.FindAction("Dpad_Up", throwIfNotFound: true);
+        m_Eye_Dpad_Down = m_Eye.FindAction("Dpad_Down", throwIfNotFound: true);
+        m_Eye_LeftStick_X = m_Eye.FindAction("LeftStick_X", throwIfNotFound: true);
+        m_Eye_LeftStick_Y = m_Eye.FindAction("LeftStick_Y", throwIfNotFound: true);
+        m_Eye_RightStick_X = m_Eye.FindAction("RightStick_X", throwIfNotFound: true);
+        m_Eye_RightStick_Y = m_Eye.FindAction("RightStick_Y", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -271,6 +439,14 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     private readonly InputAction m_Eye_Trigger_Right;
     private readonly InputAction m_Eye_Shoulder_Left;
     private readonly InputAction m_Eye_Shoulder_Right;
+    private readonly InputAction m_Eye_Dpad_Right;
+    private readonly InputAction m_Eye_Dpad_Left;
+    private readonly InputAction m_Eye_Dpad_Up;
+    private readonly InputAction m_Eye_Dpad_Down;
+    private readonly InputAction m_Eye_LeftStick_X;
+    private readonly InputAction m_Eye_LeftStick_Y;
+    private readonly InputAction m_Eye_RightStick_X;
+    private readonly InputAction m_Eye_RightStick_Y;
     public struct EyeActions
     {
         private @InputMaster m_Wrapper;
@@ -283,6 +459,14 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         public InputAction @Trigger_Right => m_Wrapper.m_Eye_Trigger_Right;
         public InputAction @Shoulder_Left => m_Wrapper.m_Eye_Shoulder_Left;
         public InputAction @Shoulder_Right => m_Wrapper.m_Eye_Shoulder_Right;
+        public InputAction @Dpad_Right => m_Wrapper.m_Eye_Dpad_Right;
+        public InputAction @Dpad_Left => m_Wrapper.m_Eye_Dpad_Left;
+        public InputAction @Dpad_Up => m_Wrapper.m_Eye_Dpad_Up;
+        public InputAction @Dpad_Down => m_Wrapper.m_Eye_Dpad_Down;
+        public InputAction @LeftStick_X => m_Wrapper.m_Eye_LeftStick_X;
+        public InputAction @LeftStick_Y => m_Wrapper.m_Eye_LeftStick_Y;
+        public InputAction @RightStick_X => m_Wrapper.m_Eye_RightStick_X;
+        public InputAction @RightStick_Y => m_Wrapper.m_Eye_RightStick_Y;
         public InputActionMap Get() { return m_Wrapper.m_Eye; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -316,6 +500,30 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @Shoulder_Right.started -= m_Wrapper.m_EyeActionsCallbackInterface.OnShoulder_Right;
                 @Shoulder_Right.performed -= m_Wrapper.m_EyeActionsCallbackInterface.OnShoulder_Right;
                 @Shoulder_Right.canceled -= m_Wrapper.m_EyeActionsCallbackInterface.OnShoulder_Right;
+                @Dpad_Right.started -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Right;
+                @Dpad_Right.performed -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Right;
+                @Dpad_Right.canceled -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Right;
+                @Dpad_Left.started -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Left;
+                @Dpad_Left.performed -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Left;
+                @Dpad_Left.canceled -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Left;
+                @Dpad_Up.started -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Up;
+                @Dpad_Up.performed -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Up;
+                @Dpad_Up.canceled -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Up;
+                @Dpad_Down.started -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Down;
+                @Dpad_Down.performed -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Down;
+                @Dpad_Down.canceled -= m_Wrapper.m_EyeActionsCallbackInterface.OnDpad_Down;
+                @LeftStick_X.started -= m_Wrapper.m_EyeActionsCallbackInterface.OnLeftStick_X;
+                @LeftStick_X.performed -= m_Wrapper.m_EyeActionsCallbackInterface.OnLeftStick_X;
+                @LeftStick_X.canceled -= m_Wrapper.m_EyeActionsCallbackInterface.OnLeftStick_X;
+                @LeftStick_Y.started -= m_Wrapper.m_EyeActionsCallbackInterface.OnLeftStick_Y;
+                @LeftStick_Y.performed -= m_Wrapper.m_EyeActionsCallbackInterface.OnLeftStick_Y;
+                @LeftStick_Y.canceled -= m_Wrapper.m_EyeActionsCallbackInterface.OnLeftStick_Y;
+                @RightStick_X.started -= m_Wrapper.m_EyeActionsCallbackInterface.OnRightStick_X;
+                @RightStick_X.performed -= m_Wrapper.m_EyeActionsCallbackInterface.OnRightStick_X;
+                @RightStick_X.canceled -= m_Wrapper.m_EyeActionsCallbackInterface.OnRightStick_X;
+                @RightStick_Y.started -= m_Wrapper.m_EyeActionsCallbackInterface.OnRightStick_Y;
+                @RightStick_Y.performed -= m_Wrapper.m_EyeActionsCallbackInterface.OnRightStick_Y;
+                @RightStick_Y.canceled -= m_Wrapper.m_EyeActionsCallbackInterface.OnRightStick_Y;
             }
             m_Wrapper.m_EyeActionsCallbackInterface = instance;
             if (instance != null)
@@ -344,6 +552,30 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @Shoulder_Right.started += instance.OnShoulder_Right;
                 @Shoulder_Right.performed += instance.OnShoulder_Right;
                 @Shoulder_Right.canceled += instance.OnShoulder_Right;
+                @Dpad_Right.started += instance.OnDpad_Right;
+                @Dpad_Right.performed += instance.OnDpad_Right;
+                @Dpad_Right.canceled += instance.OnDpad_Right;
+                @Dpad_Left.started += instance.OnDpad_Left;
+                @Dpad_Left.performed += instance.OnDpad_Left;
+                @Dpad_Left.canceled += instance.OnDpad_Left;
+                @Dpad_Up.started += instance.OnDpad_Up;
+                @Dpad_Up.performed += instance.OnDpad_Up;
+                @Dpad_Up.canceled += instance.OnDpad_Up;
+                @Dpad_Down.started += instance.OnDpad_Down;
+                @Dpad_Down.performed += instance.OnDpad_Down;
+                @Dpad_Down.canceled += instance.OnDpad_Down;
+                @LeftStick_X.started += instance.OnLeftStick_X;
+                @LeftStick_X.performed += instance.OnLeftStick_X;
+                @LeftStick_X.canceled += instance.OnLeftStick_X;
+                @LeftStick_Y.started += instance.OnLeftStick_Y;
+                @LeftStick_Y.performed += instance.OnLeftStick_Y;
+                @LeftStick_Y.canceled += instance.OnLeftStick_Y;
+                @RightStick_X.started += instance.OnRightStick_X;
+                @RightStick_X.performed += instance.OnRightStick_X;
+                @RightStick_X.canceled += instance.OnRightStick_X;
+                @RightStick_Y.started += instance.OnRightStick_Y;
+                @RightStick_Y.performed += instance.OnRightStick_Y;
+                @RightStick_Y.canceled += instance.OnRightStick_Y;
             }
         }
     }
@@ -358,5 +590,13 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnTrigger_Right(InputAction.CallbackContext context);
         void OnShoulder_Left(InputAction.CallbackContext context);
         void OnShoulder_Right(InputAction.CallbackContext context);
+        void OnDpad_Right(InputAction.CallbackContext context);
+        void OnDpad_Left(InputAction.CallbackContext context);
+        void OnDpad_Up(InputAction.CallbackContext context);
+        void OnDpad_Down(InputAction.CallbackContext context);
+        void OnLeftStick_X(InputAction.CallbackContext context);
+        void OnLeftStick_Y(InputAction.CallbackContext context);
+        void OnRightStick_X(InputAction.CallbackContext context);
+        void OnRightStick_Y(InputAction.CallbackContext context);
     }
 }
