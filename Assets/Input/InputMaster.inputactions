@@ -1,0 +1,174 @@
+{
+    "name": "InputMaster",
+    "maps": [
+        {
+            "name": "Eye",
+            "id": "2607b44d-6809-43c9-9faf-4c58dec8819b",
+            "actions": [
+                {
+                    "name": "FaceButton_Down",
+                    "type": "Button",
+                    "id": "492a70d7-d509-4077-9b92-521c09c3ced8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FaceButton_Up",
+                    "type": "Button",
+                    "id": "4d094d4b-561f-46fc-98f1-bbb593f8f554",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FaceButton_Left",
+                    "type": "Button",
+                    "id": "6d342fe3-65d9-4c2b-92de-905a57cf613a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FaceButton_Right",
+                    "type": "Button",
+                    "id": "ab9255c7-60c8-4b01-b383-b96a40a289e1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Trigger_Left",
+                    "type": "Value",
+                    "id": "ba76a4a7-1887-4bd8-a686-715fe767a491",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Trigger_Right",
+                    "type": "Value",
+                    "id": "ee61fb02-ee62-4494-916f-9543d9d53b30",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Shoulder_Left",
+                    "type": "Value",
+                    "id": "fa3c4ea9-661c-42d2-98e6-4abc1dd46137",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Shoulder_Right",
+                    "type": "Value",
+                    "id": "3198a317-7a22-4dba-b19f-e3a05f0f551c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4f096f5b-66b1-40b7-9602-d57986fba597",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FaceButton_Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4d834edb-b926-49c5-87fe-ff82c42cba51",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FaceButton_Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b060b931-f1c0-4fb7-9c82-9846720b9365",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FaceButton_Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89e4adad-13dd-404d-bdc2-02e58ee14ccb",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FaceButton_Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "95d25fe8-9c43-4f0c-9df0-c4a448094b7f",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trigger_Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91ad0187-aa74-4f42-a2a4-5de330faa617",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trigger_Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "94f2f2b3-91ad-438a-8488-0dcb8a781a9f",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoulder_Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc9bf56b-7c33-43e6-95ac-02d0fba41e7f",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoulder_Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
