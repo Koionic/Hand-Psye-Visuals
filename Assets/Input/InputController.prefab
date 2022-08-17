@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4563981277470313199}
-  - component: {fileID: 4563981277470313184}
+  - component: {fileID: 1292467629}
   - component: {fileID: 4563981277470313185}
+  - component: {fileID: 1292467625}
   m_Layer: 0
   m_Name: InputController
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4563981277470313184
+--- !u!114 &1292467629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,7 +63,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Face_Down
+        m_MethodName: OnFace_Down
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -78,7 +79,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Face_Up
+        m_MethodName: OnFace_Up
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -94,7 +95,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Face_Left
+        m_MethodName: OnFace_Left
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -110,7 +111,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Face_Right
+        m_MethodName: OnFace_Right
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -126,7 +127,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Trigger_Left
+        m_MethodName: OnTrigger_Left
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -142,7 +143,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Trigger_Right
+        m_MethodName: OnTrigger_Right
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -158,7 +159,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Shoulder_Left
+        m_MethodName: OnShoulder_Left
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -174,7 +175,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Shoulder_Right
+        m_MethodName: OnShoulder_Right
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -190,7 +191,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Dpad_Right
+        m_MethodName: OnDpad_Right
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -206,7 +207,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Dpad_Left
+        m_MethodName: OnDpad_Left
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -222,7 +223,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Dpad_Up
+        m_MethodName: OnDpad_Up
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -238,7 +239,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: Dpad_Down
+        m_MethodName: OnDpad_Down
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -254,7 +255,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: LeftStick_X
+        m_MethodName: OnLeftStick_X
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -270,7 +271,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: LeftStick_Y
+        m_MethodName: OnLeftStick_Y
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -286,7 +287,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: RightStick_X
+        m_MethodName: OnRightStick_X
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -302,7 +303,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563981277470313185}
         m_TargetAssemblyTypeName: InputInterface, Assembly-CSharp
-        m_MethodName: RightStick_Y
+        m_MethodName: OnRightStick_Y
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -315,7 +316,7 @@ MonoBehaviour:
     m_ActionId: 74176a68-7f24-42c0-94b0-631a38f8707f
     m_ActionName: Eye/RightStick_Y
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Eye
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -379,3 +380,15 @@ MonoBehaviour:
   rightStick_y:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1292467625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563981277470313186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa762873367bc8b40906522d81fc2aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

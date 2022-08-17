@@ -6,105 +6,116 @@ using UnityEngine.InputSystem;
 
 public class InputInterface : MonoBehaviour
 {
-    public UnityEvent face_up;
-    public UnityEvent face_down;
-    public UnityEvent face_left;
-    public UnityEvent face_right;
+    public UnityEvent<InputAction.CallbackContext> face_up;
+    public UnityEvent<InputAction.CallbackContext> face_down;
+    public UnityEvent<InputAction.CallbackContext> face_left;
+    public UnityEvent<InputAction.CallbackContext> face_right;
     
-    public UnityEvent shoulder_left;
-    public UnityEvent shoulder_right;
+    public UnityEvent<InputAction.CallbackContext> shoulder_left;
+    public UnityEvent<InputAction.CallbackContext> shoulder_right;
     
-    public UnityEvent<float> trigger_left;
-    public UnityEvent<float> trigger_right;
+    public UnityEvent<InputAction.CallbackContext> trigger_left;
+    public UnityEvent<InputAction.CallbackContext> trigger_right;
 
-    public UnityEvent dpad_up;
-    public UnityEvent dpad_down;
-    public UnityEvent dpad_left;
-    public UnityEvent dpad_right;
+    public UnityEvent<InputAction.CallbackContext> dpad_up;
+    public UnityEvent<InputAction.CallbackContext> dpad_down;
+    public UnityEvent<InputAction.CallbackContext> dpad_left;
+    public UnityEvent<InputAction.CallbackContext> dpad_right;
     
-    public UnityEvent<float> leftStick_x;
-    public UnityEvent<float> leftStick_y;
+    public UnityEvent<InputAction.CallbackContext> leftStick_x;
+    public UnityEvent<InputAction.CallbackContext> leftStick_y;
     
-    public UnityEvent<float> rightStick_x;
-    public UnityEvent<float> rightStick_y;
-    
-    public void Face_Up(InputAction.CallbackContext callbackContext)
+    public UnityEvent<InputAction.CallbackContext> rightStick_x;
+    public UnityEvent<InputAction.CallbackContext> rightStick_y;
+
+    public void OnControllerConnect(PlayerInput playerInput)
     {
-        face_up.Invoke();
+        Debug.Log("CONTROLLER CONNECTED");
     }
     
-    public void Face_Down(InputAction.CallbackContext callbackContext)
+    public void OnControllerDisconnect(PlayerInput playerInput)
     {
-        face_down.Invoke();
+        Debug.Log("CONTROLLER DISCONNECTED");
+
+    }
+
+    public void OnFace_Up(InputAction.CallbackContext callbackContext)
+    {
+        face_up.Invoke(callbackContext);
+    }
+
+    public void OnFace_Down(InputAction.CallbackContext callbackContext)
+    {
+        face_down.Invoke(callbackContext);
+    }
+
+    public void OnFace_Left(InputAction.CallbackContext callbackContext)
+    {
+        face_left.Invoke(callbackContext);
+    }
+
+    public void OnFace_Right(InputAction.CallbackContext callbackContext)
+    {
+        face_right.Invoke(callbackContext);
     }
     
-    public void Face_Left(InputAction.CallbackContext callbackContext)
+    public void OnShoulder_Left(InputAction.CallbackContext callbackContext)
     {
-        face_left.Invoke();
+        shoulder_left.Invoke(callbackContext);
     }
     
-    public void Face_Right(InputAction.CallbackContext callbackContext)
+    public void OnShoulder_Right(InputAction.CallbackContext callbackContext)
     {
-        face_right.Invoke();
+        shoulder_right.Invoke(callbackContext);
+    }
+
+    public void OnTrigger_Left(InputAction.CallbackContext callbackContext)
+    {
+        trigger_left.Invoke(callbackContext);
+    }
+
+    public void OnTrigger_Right(InputAction.CallbackContext callbackContext)
+    {
+        trigger_right.Invoke(callbackContext);
+    }
+
+    public void OnDpad_Up(InputAction.CallbackContext callbackContext)
+    {
+        dpad_up.Invoke(callbackContext);
     }
     
-    public void Shoulder_Left(InputAction.CallbackContext callbackContext)
+    public void OnDpad_Down(InputAction.CallbackContext callbackContext)
     {
-        shoulder_left.Invoke();
+        dpad_down.Invoke(callbackContext);
     }
     
-    public void Shoulder_Right(InputAction.CallbackContext callbackContext)
+    public void OnDpad_Left(InputAction.CallbackContext callbackContext)
     {
-        shoulder_right.Invoke();
+        dpad_left.Invoke(callbackContext);
     }
     
-    public void Trigger_Left(InputAction.CallbackContext callbackContext)
+    public void OnDpad_Right(InputAction.CallbackContext callbackContext)
     {
-        trigger_left.Invoke(callbackContext.ReadValue<float>());
+        dpad_right.Invoke(callbackContext);
     }
     
-    public void Trigger_Right(InputAction.CallbackContext callbackContext)
+    public void OnLeftStick_X(InputAction.CallbackContext callbackContext)
     {
-        trigger_right.Invoke(callbackContext.ReadValue<float>());
+        leftStick_x.Invoke(callbackContext);
     }
     
-    public void Dpad_Up(InputAction.CallbackContext callbackContext)
+    public void OnLeftStick_Y(InputAction.CallbackContext callbackContext)
     {
-        dpad_up.Invoke();
+        leftStick_y.Invoke(callbackContext);
     }
     
-    public void Dpad_Down(InputAction.CallbackContext callbackContext)
+    public void OnRightStick_X(InputAction.CallbackContext callbackContext)
     {
-        dpad_down.Invoke();
+        rightStick_x.Invoke(callbackContext);
     }
     
-    public void Dpad_Left(InputAction.CallbackContext callbackContext)
+    public void OnRightStick_Y(InputAction.CallbackContext callbackContext)
     {
-        dpad_left.Invoke();
-    }
-    
-    public void Dpad_Right(InputAction.CallbackContext callbackContext)
-    {
-        dpad_right.Invoke();
-    }
-    
-    public void LeftStick_X(InputAction.CallbackContext callbackContext)
-    {
-        leftStick_x.Invoke(callbackContext.ReadValue<float>());
-    }
-    
-    public void LeftStick_Y(InputAction.CallbackContext callbackContext)
-    {
-        leftStick_y.Invoke(callbackContext.ReadValue<float>());
-    }
-    
-    public void RightStick_X(InputAction.CallbackContext callbackContext)
-    {
-        rightStick_x.Invoke(callbackContext.ReadValue<float>());
-    }
-    
-    public void RightStick_Y(InputAction.CallbackContext callbackContext)
-    {
-        rightStick_y.Invoke(callbackContext.ReadValue<float>());
+        rightStick_y.Invoke(callbackContext);
     }
 }
