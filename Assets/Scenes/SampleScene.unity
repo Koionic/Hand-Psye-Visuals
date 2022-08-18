@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 551367955}
   - component: {fileID: 551367954}
+  - component: {fileID: 551367956}
   m_Layer: 0
   m_Name: Midi Commander
   m_TagString: Untagged
@@ -153,12 +154,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _midiCommands:
-  - name: FaceDownOn
-    signalType: 0
+  - name: DPAD - Left
+    inputButton: 12
+    signalType: 2
     channel: 0
-  - name: FaceDownOff
-    signalType: 1
-    channel: 0
+  - name: DPAD - Right
+    inputButton: 13
+    signalType: 2
+    channel: 1
+  - name: LEFT ANALOG - X Axis
+    inputButton: 0
+    signalType: 3
+    channel: 8
+  - name: LEFT ANALOG - Y Axis
+    inputButton: 1
+    signalType: 3
+    channel: 9
+  - name: RIGHT ANALOG - X Axis
+    inputButton: 3
+    signalType: 3
+    channel: 10
+  - name: RIGHT ANALOG - Y Axis
+    inputButton: 4
+    signalType: 3
+    channel: 11
 --- !u!4 &551367955
 Transform:
   m_ObjectHideFlags: 0
@@ -174,6 +193,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &551367956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551367953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa762873367bc8b40906522d81fc2aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpSmoothness: 0.2
+  lerpMaxSpeed: 0.8
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,5 +756,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1292467625, guid: 070f20ec74f5504429e0af2a2e9225a8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 070f20ec74f5504429e0af2a2e9225a8, type: 3}
