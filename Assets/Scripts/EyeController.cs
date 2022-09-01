@@ -1,9 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Random = System.Random;
+using MFunctions;
+
+
 
 public class EyeController : MonoBehaviour
 {
@@ -29,7 +33,9 @@ public class EyeController : MonoBehaviour
     private float autoNoiseSeed;
 
     private System.Random _random = new Random();
-    
+
+    public bool turningEyeball;
+
     private void Awake()
     {
         _inputInterface = FindObjectOfType<InputInterface>();
@@ -48,6 +54,7 @@ public class EyeController : MonoBehaviour
             _inputInterface.rightStick_x.AddListener(OnStickX);
             _inputInterface.rightStick_y.AddListener(OnStickY);
         }
+        
 
         int random = _random.Next(0, 32);
         
@@ -64,8 +71,9 @@ public class EyeController : MonoBehaviour
             AutoPilotLerp();
         }
         else if (autoPilotTimer == null && 
-                 targetEyeRotXZ.x == 0f && 
-                 targetEyeRotXZ.y == 0f)
+                 !turningEyeball &&
+                 (targetEyeRotXZ.x == 0f || 
+                 targetEyeRotXZ.y == 0f))
         {
             Debug.Log("STARTING COROUTINE");
             autoPilotTimer = StartCoroutine(AutoPilotTimer());
@@ -91,20 +99,11 @@ public class EyeController : MonoBehaviour
     
     void LerpRot()
     {
-        LerpValue(ref currentEyeRotXZ.x, ref targetEyeRotXZ.x, eyeRotXZLerp);
-        LerpValue(ref currentEyeRotXZ.y, ref targetEyeRotXZ.y, eyeRotXZLerp);
+        MathFunctions.LerpValue(ref currentEyeRotXZ.x, targetEyeRotXZ.x, eyeRotXZLerp);
+        MathFunctions.LerpValue(ref currentEyeRotXZ.y, targetEyeRotXZ.y, eyeRotXZLerp);
     }
 
-    void LerpValue(ref float current, ref float target, float lerp)
-    {
-        if (Mathf.Abs(target - current) <= 0.05f)
-        {
-            current = target;
-            return;
-        }
 
-        current = Mathf.Lerp(current, target, lerp);
-    }
     
     void OnStickX(InputAction.CallbackContext callbackContext)
     {
@@ -112,14 +111,14 @@ public class EyeController : MonoBehaviour
 
         CancelAutoPilot();
     }
-    
+
     void OnStickY(InputAction.CallbackContext callbackContext)
     {
         targetEyeRotXZ.x = callbackContext.ReadValue<float>();
 
         CancelAutoPilot();
     }
-
+    
     void SetEyeRot()
     {
         if (eyeObj)
@@ -133,7 +132,7 @@ public class EyeController : MonoBehaviour
         }
     }
 
-    void CancelAutoPilot()
+    public void CancelAutoPilot()
     {
         if (autoPilotTimer != null)
         {
@@ -150,4 +149,6 @@ public class EyeController : MonoBehaviour
 
         autoPilotOn = true;
     }
+
+
 }
