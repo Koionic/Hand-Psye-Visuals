@@ -706,6 +706,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoPilotDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
       propertyPath: eyeRotScaleXZ.y
       value: -40
       objectReference: {fileID: 0}
@@ -792,6 +796,10 @@ PrefabInstance:
     - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
       propertyPath: leftEye
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoPilotDelay
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
       propertyPath: eyeRotScaleXZ.y

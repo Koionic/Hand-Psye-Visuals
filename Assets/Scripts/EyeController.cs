@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = System.Random;
 
 public class EyeController : MonoBehaviour
 {
@@ -20,7 +21,14 @@ public class EyeController : MonoBehaviour
     public Vector2 eyeRotAdjustmentXZ = new Vector2();
     public Vector2 eyeRotScaleXZ = new Vector2();
 
+    public Coroutine autoPilotTimer = null;
     
+    public float autoPilotDelay;
+    public bool autoPilotOn;
+
+    private float autoNoiseSeed;
+
+    private System.Random _random = new Random();
     
     private void Awake()
     {
@@ -40,16 +48,47 @@ public class EyeController : MonoBehaviour
             _inputInterface.rightStick_x.AddListener(OnStickX);
             _inputInterface.rightStick_y.AddListener(OnStickY);
         }
+
+        int random = _random.Next(0, 32);
+        
+        Debug.Log("Random: " + random);
+        
+        autoNoiseSeed = random;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (autoPilotOn)
+        {
+            AutoPilotLerp();
+        }
+        else if (autoPilotTimer == null && 
+                 targetEyeRotXZ.x == 0f && 
+                 targetEyeRotXZ.y == 0f)
+        {
+            Debug.Log("STARTING COROUTINE");
+            autoPilotTimer = StartCoroutine(AutoPilotTimer());
+        }
+
         LerpRot();
-        
+
         SetEyeRot();
+
+
     }
 
+//new Vector2((Mathf.PerlinNoise(0f, Time.time) * 2) - 1, (Mathf.PerlinNoise(Time.time, 0f) * 2) - 1)
+
+    void AutoPilotLerp()
+    {
+        targetEyeRotXZ.x = (Mathf.PerlinNoise(autoNoiseSeed, Time.time * 1.2f) * 2f) - 1f;
+        //targetEyeRotXZ.x = Mathf.Pow(targetEyeRotXZ.x, 3f);
+
+        targetEyeRotXZ.y = (Mathf.PerlinNoise(Time.time * 1.1f, autoNoiseSeed) * 2f) - 1f;
+        //targetEyeRotXZ.y = Mathf.Pow(targetEyeRotXZ.y, 3f);
+    }
+    
     void LerpRot()
     {
         LerpValue(ref currentEyeRotXZ.x, ref targetEyeRotXZ.x, eyeRotXZLerp);
@@ -70,11 +109,15 @@ public class EyeController : MonoBehaviour
     void OnStickX(InputAction.CallbackContext callbackContext)
     {
         targetEyeRotXZ.y = callbackContext.ReadValue<float>();
+
+        CancelAutoPilot();
     }
     
     void OnStickY(InputAction.CallbackContext callbackContext)
     {
         targetEyeRotXZ.x = callbackContext.ReadValue<float>();
+
+        CancelAutoPilot();
     }
 
     void SetEyeRot()
@@ -88,5 +131,23 @@ public class EyeController : MonoBehaviour
 
             eyeObj.transform.eulerAngles = eyeRot;
         }
+    }
+
+    void CancelAutoPilot()
+    {
+        if (autoPilotTimer != null)
+        {
+            StopCoroutine(autoPilotTimer);
+            autoPilotTimer = null;
+        }
+
+        autoPilotOn = false;
+    }
+
+    IEnumerator AutoPilotTimer()
+    {
+        yield return new WaitForSecondsRealtime(autoPilotDelay);
+
+        autoPilotOn = true;
     }
 }
