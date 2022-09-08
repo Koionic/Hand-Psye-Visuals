@@ -44,10 +44,10 @@ public class ControllerToMidi : MonoBehaviour
         _inputInterface.face_left.AddListener(FaceLeft);
         _inputInterface.face_right.AddListener(FaceRight);
         
-        _inputInterface.dpad_up.AddListener(DpadUp);
-        _inputInterface.dpad_down.AddListener(DpadDown);
-        _inputInterface.dpad_left.AddListener(DpadLeft);
-        _inputInterface.dpad_right.AddListener(DpadRight);
+        // _inputInterface.dpad_up.AddListener(DpadUp);
+        // _inputInterface.dpad_down.AddListener(DpadDown);
+        // _inputInterface.dpad_left.AddListener(DpadLeft);
+        // _inputInterface.dpad_right.AddListener(DpadRight);
         
         _inputInterface.trigger_left.AddListener(LeftTrigger);
         _inputInterface.trigger_right.AddListener(RightTrigger);
@@ -93,12 +93,12 @@ public class ControllerToMidi : MonoBehaviour
         }
     }
     
-    void SendCCMidi(ControllerInputButton inputButton, float value)
+    public void SendCCMidi(ControllerInputButton inputButton, float value)
     {
         _midiCommander.SendSignal(inputButton, 0, value);
     }
     
-    void SendButtonMidi(ControllerInputButton inputButton, InputActionPhase actionPhase)
+    public void SendButtonMidi(ControllerInputButton inputButton, InputActionPhase actionPhase)
     {
         _midiCommander.SendSignal(inputButton, 0, 100f, actionPhase);
     }

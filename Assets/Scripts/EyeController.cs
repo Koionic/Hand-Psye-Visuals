@@ -56,7 +56,7 @@ public class EyeController : MonoBehaviour
         }
         
 
-        int random = _random.Next(0, 32);
+        int random = _random.Next(0, 128);
         
         Debug.Log("Random: " + random);
         
