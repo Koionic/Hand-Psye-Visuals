@@ -11,10 +11,14 @@ using MFunctions;
 
 public class EyeController : MonoBehaviour
 {
+    [Header("References")]
+    
     private InputInterface _inputInterface;
     
     public GameObject eyeObj;
 
+    [Header("Stats")]
+    
     public bool leftEye;
 
     public float eyeRotXZLerp;
@@ -25,11 +29,27 @@ public class EyeController : MonoBehaviour
     public Vector2 eyeRotAdjustmentXZ = new Vector2();
     public Vector2 eyeRotScaleXZ = new Vector2();
 
+    [Header("Auto Pilot")]
+    
     public Coroutine autoPilotTimer = null;
     
     public float autoPilotDelay;
     public bool autoPilotOn;
 
+    public bool focusOn;
+
+    public Vector2 focusPosition;
+    
+    public Coroutine focusIntervalTimer = null;
+
+    public float autoFocusIntervalMin, autoFocusIntervalMax;
+    
+    public Coroutine focusDurationTimer = null;
+
+    public float autoFocusDurationMin, autoFocusDurationMax;
+
+    [Header("Overall Random Values")]
+    
     private float autoNoiseSeed;
 
     private System.Random _random = new Random();
@@ -90,13 +110,21 @@ public class EyeController : MonoBehaviour
 
     void AutoPilotLerp()
     {
-        targetEyeRotXZ.x = (Mathf.PerlinNoise(autoNoiseSeed, Time.time * 1.2f) * 2f) - 1f;
-        //targetEyeRotXZ.x = Mathf.Pow(targetEyeRotXZ.x, 3f);
+        if (focusOn)
+        {
+            targetEyeRotXZ.x = focusPosition.x;
+            targetEyeRotXZ.y = focusPosition.y;
+        }
+        else
+        {
+            targetEyeRotXZ.x = (Mathf.PerlinNoise(autoNoiseSeed, Time.time * 1.2f) * 2f) - 1f;
+            //targetEyeRotXZ.x = Mathf.Pow(targetEyeRotXZ.x, 3f);
 
-        targetEyeRotXZ.y = (Mathf.PerlinNoise(Time.time * 1.1f, autoNoiseSeed) * 2f) - 1f;
-        //targetEyeRotXZ.y = Mathf.Pow(targetEyeRotXZ.y, 3f);
+            targetEyeRotXZ.y = (Mathf.PerlinNoise(Time.time * 1.1f, autoNoiseSeed) * 2f) - 1f;
+            //targetEyeRotXZ.y = Mathf.Pow(targetEyeRotXZ.y, 3f);
+        }
     }
-    
+
     void LerpRot()
     {
         MathFunctions.LerpValue(ref currentEyeRotXZ.x, targetEyeRotXZ.x, eyeRotXZLerp);
@@ -140,6 +168,18 @@ public class EyeController : MonoBehaviour
             autoPilotTimer = null;
         }
 
+        if (focusIntervalTimer != null)
+        {
+            StopCoroutine(focusIntervalTimer);
+            focusIntervalTimer = null;
+        }
+        
+        if (focusDurationTimer != null)
+        {
+            StopCoroutine(focusDurationTimer);
+            focusDurationTimer = null;
+        }
+
         autoPilotOn = false;
     }
 
@@ -148,7 +188,41 @@ public class EyeController : MonoBehaviour
         yield return new WaitForSecondsRealtime(autoPilotDelay);
 
         autoPilotOn = true;
+
+        StartCoroutine(FocusIntervalTimer());
     }
+    
+    IEnumerator FocusIntervalTimer()
+    {
+        float randTime = (float)_random.Next((int)(autoFocusIntervalMin * 100), (int)(autoFocusIntervalMax * 100)) / 100f;
+        
+        yield return new WaitForSecondsRealtime(randTime);
 
+        float randX = (float)_random.Next(-100,100) / 100f;
+        float randY = (float)_random.Next(-100,100) / 100f;
 
+        focusPosition = new Vector2(randX, randY);
+        
+        focusOn = true;
+
+        focusDurationTimer = StartCoroutine(FocusDurationTimer());
+
+        focusIntervalTimer = null;
+    }
+    
+    IEnumerator FocusDurationTimer()
+    {
+        float randTime = (float)_random.Next((int)(autoFocusDurationMin * 100), (int)(autoFocusDurationMax * 100)) / 100f;
+        
+        yield return new WaitForSecondsRealtime(randTime);
+
+        focusPosition = Vector2.zero;
+        
+        focusOn = false;
+
+        focusIntervalTimer = StartCoroutine(FocusIntervalTimer());
+
+        focusDurationTimer = null;
+    }
+    
 }

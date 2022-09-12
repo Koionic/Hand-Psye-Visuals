@@ -214,6 +214,22 @@ PrefabInstance:
       propertyPath: eyeballTurnTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMin
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
 --- !u!1001 &535072219
@@ -306,6 +322,22 @@ PrefabInstance:
     - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
       propertyPath: eyeballTurnTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMin
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
@@ -725,6 +757,22 @@ PrefabInstance:
       propertyPath: eyeballTurnTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMin
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
 --- !u!1 &963194225
@@ -1063,6 +1111,22 @@ PrefabInstance:
       propertyPath: eyeballTurnTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMin
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
 --- !u!114 &1071081529 stripped
@@ -1188,6 +1252,22 @@ PrefabInstance:
       propertyPath: eyeballTurnTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMin
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
 --- !u!1001 &1306449379
@@ -1280,6 +1360,22 @@ PrefabInstance:
     - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
       propertyPath: eyeballTurnTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMin
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
@@ -1432,6 +1528,22 @@ PrefabInstance:
     - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
       propertyPath: eyeballTurnTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMin
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
@@ -1607,6 +1719,22 @@ PrefabInstance:
     - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
       propertyPath: eyeballTurnTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusDurationMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859422039309339584, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
+      propertyPath: autoFocusIntervalMin
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa03ece1a0e92654d952bd3a88c3229c, type: 3}
